@@ -5,26 +5,28 @@ const textoVotos = document.getElementById("contador")
 
 boton.addEventListener("click", function(){
 
-votos = votos + 1
+votos += 1
 
-textoVotos.innerText = "Votos: " + votos
-
-console.log("voto registrado")
+textoVotos.innerHTML = "Votos: " + votos
 
 })
 
-
+function VerificarNombre(){
+    let nombre = document.getElementById("nombre").value
+    let nombreArray = nombre//seguir
+}
 const form = document.getElementById("formPropuesta")
 
 form.addEventListener("submit", function(e){
 
-let nombre = document.getElementById("nombre").value
-let idea = document.getElementById("idea").value
+let nombre = document.getElementById("nombre")
+let idea = document.getElementById("idea")
 
-if(nombre = "" || idea == ""){
+if(nombre.value == "" || idea.value == ""){
 
-document.getElementById("mensaje").innerText = "Completa todos los campos"
+document.getElementById("mensaje").innerHTML = "Completa todos los campos"
 
 }
+
 
 })
