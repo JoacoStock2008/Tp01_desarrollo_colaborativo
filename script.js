@@ -19,6 +19,7 @@ const form = document.getElementById("formPropuesta")
 
 form.addEventListener("submit", function () {
 
+    //event.preventDefault() --> no lo ponemos porque dice que es un evento deprecated
     let nombre = document.getElementById("nombre")
     let idea = document.getElementById("idea")
 
