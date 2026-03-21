@@ -3,8 +3,9 @@ let votos = 0
 const boton = document.getElementById("votar")
 const textoVotos = document.getElementById("contador")
 
-boton.addEventListener("click", function () {
+boton.addEventListener("click", function (event) {
 
+    event.preventDefault()
     votos += 1
 
     textoVotos.innerHTML = "Votos: " + votos
@@ -17,9 +18,9 @@ function VerificarNombre() {
 }
 const form = document.getElementById("formPropuesta")
 
-form.addEventListener("submit", function () {
+form.addEventListener("submit", function (event) {
 
-    //event.preventDefault() --> no lo ponemos porque dice que es un evento deprecated
+    event.preventDefault()
     let nombre = document.getElementById("nombre")
     let idea = document.getElementById("idea")
 
@@ -33,7 +34,7 @@ form.addEventListener("submit", function () {
             document.getElementById("mensaje").innerHTML = "La propuesta se ha enviado correctamente. Redirigiendo en " + tiempo + " segundos..."
             tiempo -= 1;
 
-            if(tiempo < 0){
+            if (tiempo < 0) {
                 clearInterval(intervalo)
                 nombre.value = ""
                 idea.value = ""
