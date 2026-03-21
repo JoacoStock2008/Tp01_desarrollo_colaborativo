@@ -9,17 +9,17 @@
 <body>
 
 <header class="navbar">
-
 <h2>Ideas Último Año</h2>
 
 <nav>
 <a href="#">Inicio</a>
 <a href="#">Propuestas</a>
-<a href="#">Contacto</a>
+<a href="contacto.html">Contacto</a>
 </nav>
-
 </header>
 
+
+<main>
 
 <section class="hero">
 
@@ -39,13 +39,13 @@
 
 <form id="formPropuesta">
 
-<label>Tu nombre</label>
-<input type="text" id="nombre">
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" maxlength="50">
 
-<label>Tu propuesta</label>
-<input type="text" id="idea">
+<label for="idea">Propuesta</label>
+<input type="text" id="idea" name="idea" minlength="1">
 
-<button>Enviar propuesta</button>
+<button type="submit">Enviar propuesta</button>
 
 <p id="mensaje"></p>
 
@@ -53,10 +53,14 @@
 
 </section>
 
+</main>
+
 
 <footer>
 
 <p>Promoción 2026</p>
+<p>Copyright © 2026 paco stock</p>
+<p>Dónde contactarnos: <a href="contacto.html">contactanos</a></p>
 
 </footer>
 
